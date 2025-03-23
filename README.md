@@ -63,7 +63,7 @@ python telegram_bot.py
 
 ## Requirements
 
-- Python 3.8+
+- Python 3.11+
 - OpenAI API access with Responses API enabled
 - Telegram Bot Token
 - See `requirements.txt` for complete Python package dependencies
