@@ -1,21 +1,29 @@
-# AI Telegram Bot with Web Search
+# OpenAI Responses API Telegram Bot
 
-A Telegram bot powered by OpenAI's GPT-4o-mini model with web search capabilities. The bot can answer questions using its pre-trained knowledge and search the web for up-to-date information when needed.
+A Telegram bot that leverages OpenAI's latest Responses API to provide intelligent conversations with real-time web search capabilities. The bot intelligently decides when to use its pre-trained knowledge and when to search the web for up-to-date information.
 
 ## Features
 
-- Natural language conversation with GPT-4o-mini
-- Real-time web search capability
-- Immediate feedback when searching the web
-- Conversation memory to maintain context
-- Typing indicators for better UX
+- Integration with OpenAI's latest Responses API
+- Smart web search capability (bot decides when to use web search)
+- Immediate feedback with 🔍 indicator when performing web searches
+- Maintains conversation context between messages
+- Real-time typing indicators for better user experience
+- Efficient response handling with proper error management
+
+## Technical Details
+
+- Uses OpenAI's `gpt-4o-mini` model
+- Implements tool-choice auto-selection for intelligent web search decisions
+- Handles response streaming and tool calls efficiently
+- Maintains conversation context using response IDs
 
 ## Setup
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/ai-telegram-bot.git
-cd ai-telegram-bot
+git clone https://github.com/esakrissa/responses-api-telegram.git
+cd responses-api-telegram
 ```
 
 2. Create a virtual environment and install dependencies:
@@ -39,12 +47,27 @@ python telegram_bot.py
 ## Usage
 
 1. Start a chat with your bot on Telegram
-2. Send `/start` to initialize the conversation
-3. Ask any question - the bot will:
-   - Use its knowledge to answer simple questions
-   - Search the web for current information when needed
+2. Send any question or message
+3. The bot will:
+   - Use its pre-trained knowledge for general questions
+   - Automatically search the web when up-to-date information is needed
    - Show a 🔍 indicator when performing web searches
+   - Maintain context for natural conversation flow
+
+## Example Interactions
+
+- General knowledge questions (uses pre-trained knowledge)
+- Current events questions (triggers web search)
+- Technical questions about recent developments (triggers web search)
+- Follow-up questions (maintains context)
 
 ## Requirements
 
-See `requirements.txt` for the complete list of dependencies. 
+- Python 3.8+
+- OpenAI API access with Responses API enabled
+- Telegram Bot Token
+- See `requirements.txt` for complete Python package dependencies
+
+## Contributing
+
+Feel free to open issues or submit pull requests if you have suggestions for improvements or bug fixes. 
